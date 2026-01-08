@@ -1,11 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Simple Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>welcome to aws class</h1>
+  <header class="site-header">
+    <div class="container">
+      <h1>Simple Website</h1>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero container">
+      <h2>Welcome</h2>
+      <p>A minimal static site generated for the Aws repository.</p>
+      <button id="theme-toggle">Toggle theme</button>
+    </section>
+    <section id="features" class="container">
+      <h3>Features</h3>
+      <ul>
+        <li>Responsive layout</li>
+        <li>Accessible markup</li>
+        <li>Theme toggle with JavaScript</li>
+      </ul>
+    </section>
+    <section id="contact" class="container">
+      <h3>Contact</h3>
+      <form id="contact-form" onsubmit="return false;">
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        <button id="submit">Send</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">© 2026 Dineshenuguthala</div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
